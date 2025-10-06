@@ -2,19 +2,19 @@ import React from 'react';
 
 // Client logos
 const logos = [
-  { name: "Client 1", src: "/saasland/img/logo1.png" },
-  { name: "Client 2", src: "/saasland/img/logo2.png" },
-  { name: "Client 3", src: "/saasland/img/logo3.png" },
-  { name: "Client 4", src: "/saasland/img/logo4.png" },
-  { name: "Client 5", src: "/saasland/img/logo5.png" },
-  { name: "Client 6", src: "/saasland/img/logo6.png" },
-  { name: "Client 7", src: "/saasland/img/logo7.png" },
-  { name: "Client 8", src: "/saasland/img/logo8.png" },
-  { name: "Client 9", src: "/saasland/img/logo9.png" },
-  { name: "Client 10", src: "/saasland/img/logo10.png" },
-  { name: "Client 11", src: "/saasland/img/logo11.png" },
-  { name: "Client 12", src: "/saasland/img/logo12.png" },
-  { name: "Client 13", src: "/saasland/img/logo13.png" },
+  { name: "Client 1", src: "/img/logo1.png" },
+  { name: "Client 2", src: "/img/logo2.png" },
+  { name: "Client 3", src: "/img/logo3.png" },
+  { name: "Client 4", src: "/img/logo4.png" },
+  { name: "Client 5", src: "/img/logo5.png" },
+  { name: "Client 6", src: "/img/logo6.png" },
+  { name: "Client 7", src: "/img/logo7.png" },
+  { name: "Client 8", src: "/img/logo8.png" },
+  { name: "Client 9", src: "/img/logo9.png" },
+  { name: "Client 10", src: "/img/logo10.png" },
+  { name: "Client 11", src: "/img/logo11.png" },
+  { name: "Client 12", src: "/img/logo12.png" },
+  { name: "Client 13", src: "/img/logo13.png" },
 ];
 
 const LogoCarousel = () => {
