@@ -142,7 +142,7 @@ const HeroSection = () => {
               <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-orange-500/30 p-3 shadow-2xl transform transition-all duration-700 hover:scale-[1.02] group-hover:border-orange-500/60 group-hover:shadow-[0_20px_80px_rgba(251,146,60,0.4)]">
                 <div className="relative overflow-hidden rounded-xl">
                   <img 
-                    src="public/img/istockphoto-2151031508-1024x1024.jpg"
+                    src="/img/istockphoto-2151031508-1024x1024.jpg"
                     alt="Dashboard Preview"
                     className="rounded-xl w-full transform group-hover:scale-105 transition-transform duration-700"
                   />
