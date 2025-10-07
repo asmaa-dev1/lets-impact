@@ -31,8 +31,8 @@ const CtaSection = () => {
             
             <div className="md:w-1/3">
               <img 
-                src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=300&h=300&q=80"
-                alt="Dashboard Preview"
+                // src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=300&h=300&q=80"
+                // alt="Dashboard Preview"
                 className="rounded-lg w-full card-shadow"
               />
             </div>
