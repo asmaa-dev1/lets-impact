@@ -30,7 +30,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-saas-black bg-opacity-90 backdrop-blur-sm sticky top-0 z-50 border-b border-saas-darkGray">
+    <nav className="bg-gradient-to-r from-orange-500 to-orange-600 backdrop-blur-sm sticky top-0 z-50 border-b border-orange-700 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
@@ -39,9 +39,11 @@ const Navbar = () => {
               onClick={() => scrollToSection("home")}
               className="flex items-center cursor-pointer"
             >
-              <span className="text-4xl font-bold bg-gradient-to-r from-saas-orange to-amber-500 bg-clip-text text-transparent">
-                LET'S IMPACT
-              </span>
+              <img 
+                src="/img/logoL.png" 
+                alt="LET'S IMPACT Logo" 
+                className="h-12 w-auto object-contain"
+              />
             </button>
           </div>
 
@@ -54,21 +56,25 @@ const Navbar = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`px-4 py-3 text-lg font-medium transition-colors ${
                     activeSection === item.id
-                      ? "text-saas-orange"
-                      : "text-white hover:text-saas-orange"
+                      ? "text-black font-bold"
+                      : "text-white hover:text-black"
                   }`}
                 >
                   {item.name}
                 </button>
               ))}
               
-              {/* Book a Call Button */}
+              {/* Book a Call Button - New Style */}
               <Button 
                 onClick={() => scrollToSection("contact")}
-                className="bg-saas-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 flex items-center gap-2"
+                variant="outline" 
+                className="relative border-2 border-white/50 text-white hover:text-black font-semibold py-3 px-7 rounded-xl transition-all duration-300 group overflow-hidden hover:border-white hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] bg-black/20 backdrop-blur-sm"
               >
-                <Calendar size={20} />
-                Book a Call
+                <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+                <span className="relative text-base flex items-center gap-2">
+                  <Calendar size={20} />
+                  Book a Call
+                </span>
               </Button>
             </div>
           </div>
@@ -91,7 +97,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-saas-darkGray">
+        <div className="md:hidden bg-orange-600 border-t border-orange-700">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <button
@@ -99,22 +105,26 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`block w-full text-left px-3 py-2 text-base font-medium ${
                   activeSection === item.id
-                    ? "text-saas-orange"
-                    : "text-white hover:text-saas-orange"
+                    ? "text-black font-bold"
+                    : "text-white hover:text-black"
                 }`}
               >
                 {item.name}
               </button>
             ))}
             
-            {/* Book a Call in mobile menu */}
+            {/* Book a Call in mobile menu - New Style */}
             <div className="mt-4 px-3 py-2">
               <Button
                 onClick={() => scrollToSection("contact")}
-                className="bg-saas-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg w-full flex items-center justify-center gap-2"
+                variant="outline" 
+                className="relative border-2 border-white/50 text-white hover:text-black font-semibold py-3 px-7 rounded-xl transition-all duration-300 group overflow-hidden hover:border-white hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] w-full bg-black/20 backdrop-blur-sm"
               >
-                <Calendar size={20} />
-                Book a Call
+                <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+                <span className="relative text-base flex items-center justify-center gap-2">
+                  <Calendar size={20} />
+                  Book a Call
+                </span>
               </Button>
             </div>
           </div>

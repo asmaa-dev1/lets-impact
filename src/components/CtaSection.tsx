@@ -20,38 +20,42 @@ const CtaSection = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-saas-orange opacity-20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-600 opacity-10 rounded-full blur-3xl"></div>
           
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="md:w-2/3">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to unlock your hidden potential?
+          <div className="relative z-10 flex flex-col items-center justify-center gap-8 text-center">
+            {/* Title */}
+            <div className="mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-saas-orange to-amber-500 bg-clip-text text-transparent">
+                From Casablanca to Global Success 🇲🇦
               </h2>
-              <p className="text-gray-300 mb-6 max-w-xl">
-                Join leaders and brands who are strengthening their position and earning the income they've been missing. Book your free consultation today.
+              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                Where Moroccan excellence meets international growth. Join elite brands transforming their future from the economic capital of Africa.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={scrollToCalendly}
-                  className="bg-saas-orange hover:bg-orange-600 text-white font-semibold"
-                >
-                  Book Your Free Call
-                </Button>
-                <Button 
-                  onClick={scrollToCalendly}
-                  variant="outline" 
-                  className="border-background text-white hover:bg-white hover:text-saas-black hover:border-white"
-                >
-                  Schedule Consultation
-                </Button>
+            </div>
+
+            {/* Morocco Images Grid */}
+            <div className="flex flex-col md:flex-row gap-6 w-full max-w-4xl">
+              <div className="md:w-1/2">
+                <img 
+                  src="/img/casa1.jpg"
+                  alt="Casablanca Morocco"
+                  className="rounded-lg w-full h-64 object-cover card-shadow"
+                />
+              </div>
+              <div className="md:w-1/2">
+                <img 
+                  src="/img/casa3.jpg"
+                  alt="Morocco Cityscape"
+                  className="rounded-lg w-full h-64 object-cover card-shadow"
+                />
               </div>
             </div>
-            
-            <div className="md:w-1/3">
-              <img 
-                src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=300&h=300&q=80"
-                alt="Growth Strategy Preview"
-                className="rounded-lg w-full card-shadow"
-              />
-            </div>
+
+            {/* Call to Action Button */}
+            <Button 
+              onClick={scrollToCalendly}
+              className="bg-saas-orange hover:bg-orange-600 text-white font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              Book Your Free Call
+            </Button>
           </div>
         </div>
       </div>

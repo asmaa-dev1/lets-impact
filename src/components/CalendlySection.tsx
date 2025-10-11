@@ -8,29 +8,39 @@ const CalendlySection = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">
-            <Calendar className="text-saas-orange" size={40} />
+            <Calendar className="text-saas-orange" size={32} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-saas-orange to-amber-500 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-saas-orange to-amber-500 bg-clip-text text-transparent">
             Book Your Personalized Call
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-base text-gray-300 max-w-3xl mx-auto mb-6">
             An expert analyzes your situation and shows you how to fill your calendar
           </p>
           
           {/* Benefits */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="flex items-center gap-2 text-gray-300">
-              <Clock className="text-saas-orange" size={20} />
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="flex items-center gap-2 text-gray-300 text-sm">
+              <Clock className="text-saas-orange" size={16} />
               <span>30 minutes</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <CheckCircle className="text-saas-orange" size={20} />
+            <div className="flex items-center gap-2 text-gray-300 text-sm">
+              <CheckCircle className="text-saas-orange" size={16} />
               <span>Free</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <CheckCircle className="text-saas-orange" size={20} />
+            <div className="flex items-center gap-2 text-gray-300 text-sm">
+              <CheckCircle className="text-saas-orange" size={16} />
               <span>No commitment</span>
             </div>
+          </div>
+
+          {/* New Section - Exclusive Message */}
+          <div className="mb-6">
+            <p className="text-white text-lg font-semibold mb-2">
+              We Don't Work With Everyone – Only High-Potential Clients
+            </p>
+            <p className="text-saas-orange text-xl font-bold">
+              Ready to Unlock Your Hidden Potential?
+            </p>
           </div>
         </div>
 
