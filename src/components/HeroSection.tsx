@@ -117,45 +117,9 @@ const HeroSection = () => {
                 <span className="absolute inset-0 rounded-xl border-2 border-white/30 group-hover:scale-105 transition-transform duration-300"></span>
               </Button>
               
-              
-              <Button 
-                onClick={scrollToFaq}
-                variant="outline" 
-                className="relative border-2 border-orange-500/50 text-orange-400 hover:text-white font-semibold py-3 px-7 rounded-xl transition-all duration-300 group overflow-hidden hover:border-orange-500 hover:shadow-[0_0_30px_rgba(251,146,60,0.3)]"
-              >
-                <span className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-                <span className="relative text-base">Your Questions Answered</span>
-              </Button>
+            
             </div>
             
-            {/* Qualification text */}
-            <div className="text-sm text-gray-400 mb-8 max-w-md mx-auto">
-              <span className="relative z-10 hover:text-white transition-colors duration-300">
-                Not everyone qualifies. Only brands and individuals ready for transformation will be considered.
-              </span>
-            </div>
-
-            {/* Email submission */}
-            <div className="mb-8 max-w-2xl mx-auto">
-              <div className="flex flex-col sm:flex-row gap-3 items-center bg-gradient-to-r from-orange-900/20 to-amber-900/20 p-3 rounded-2xl border border-orange-500/30 backdrop-blur-sm">
-                <div className="flex items-center gap-3 flex-1 w-full">
-                  <span className="text-3xl">👋</span>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email here and we'll send you some 'magic'..."
-                    className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-base"
-                  />
-                </div>
-                <Button
-                  onClick={handleEmailSubmit}
-                  className="bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 whitespace-nowrap shadow-[0_0_20px_rgba(251,146,60,0.5)] hover:shadow-[0_0_30px_rgba(251,146,60,0.7)] hover:scale-105"
-                >
-                  Do it →
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </div>

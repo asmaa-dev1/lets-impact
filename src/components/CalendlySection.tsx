@@ -10,12 +10,6 @@ const CalendlySection = () => {
           <div className="inline-flex items-center gap-2 mb-4">
             <Calendar className="text-saas-orange" size={32} />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-saas-orange to-amber-500 bg-clip-text text-transparent">
-            Book Your Personalized Call
-          </h2>
-          <p className="text-base text-gray-300 max-w-3xl mx-auto mb-6">
-            An expert analyzes your situation and shows you how to fill your calendar
-          </p>
           
           {/* Benefits */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -34,22 +28,22 @@ const CalendlySection = () => {
           </div>
 
           {/* New Section - Exclusive Message */}
-          <div className="mb-6">
-            <p className="text-white text-lg font-semibold mb-2">
-              We Don't Work With Everyone – Only High-Potential Clients
-            </p>
-            <p className="text-saas-orange text-xl font-bold">
+          <div className="mb-7">
+             <p className="text-saas-orange text-xl font-bold">
               Ready to Unlock Your Hidden Potential?
+            </p>
+            <p className="text-white text-md font-semibold mb-2">
+              We Don't Work With Everyone – Only High-Potential Clients
             </p>
           </div>
         </div>
 
-        {/* Calendly Embed */}
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-5xl mx-auto">
+        {/* Calendly Embed - SMALLER SIZE */}
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-3xl mx-auto">
           <iframe
             src="https://calendly.com/asmaaelhint0/30min?embed_domain=localhost&embed_type=Inline&hide_gdpr_banner=1"
             width="100%"
-            height="700"
+            height="550"
             frameBorder="0"
             title="Calendly Booking"
             className="w-full"

@@ -69,12 +69,18 @@ const ClientShowcaseCarousel = () => {
     <>
       <div className="bg-saas-black py-16 md:py-24 overflow-hidden">
         <div className="section-container">
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
-              Client <span className="gradient-text">Testimonials</span>
-            </h2>
-          </div>
+      <div className="max-w-6xl mx-auto text-center relative z-10">
+        <p className="text-xl md:text-2xl text-gray-400 mb-6 font-light">
+          Industry leaders and professionals agree:
+        </p>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-12">
+          <span className="text-saas-orange">Let's Impact</span>{' '}
+          <span className="text-white">redefines the way</span>
+          <br />
+          <span className="text-white">businesses grow.</span>
+        </h2>
+      
+      </div>
           
           {/* Carousel Container */}
           <div className="relative">

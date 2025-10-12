@@ -21,13 +21,9 @@ const Index = () => {
         
         {/* Section 2: About */}
         <section id="about">
-          <PressSection />
-        </section>
-        
-        {/* Section 3: Clients */}
-        <section id="clients">
           <LogoCarousel />
         </section>
+        
         
         {/* Section 4: Testimonials */}
         <section id="testimonials">
@@ -43,9 +39,14 @@ const Index = () => {
         <section id="faq">
           <FaqSection />
         </section>
-        
+
         {/* Section 7: CTA Final */}
-        <CtaSection />
+        <section id="Blogs">
+          <CtaSection />
+        </section>
+        
+        
+        
       </main>
       <Footer />
     </div>
