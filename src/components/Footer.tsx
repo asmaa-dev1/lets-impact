@@ -47,15 +47,15 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Navigation - متطابق مع Navbar */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-3">
               <li><div onClick={() => scrollToSection("home")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Home</div></li>
               <li><div onClick={() => scrollToSection("about")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">About</div></li>
-              <li><div onClick={() => scrollToSection("clients")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Clients</div></li>
               <li><div onClick={() => scrollToSection("testimonials")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Testimonials</div></li>
               <li><div onClick={() => scrollToSection("faq")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">FAQ</div></li>
+              <li><div onClick={() => scrollToSection("Blogs")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Blogs</div></li>
             </ul>
           </div>
 
@@ -63,9 +63,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li><div onClick={() => scrollToSection("contact")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Growth Consulting</div></li>
-              <li><div onClick={() => scrollToSection("contact")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Business Strategy</div></li>
-              <li><div onClick={() => scrollToSection("contact")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Revenue Optimization</div></li>
+              <li><div onClick={() => scrollToSection("about")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Growth Consulting</div></li>
+              <li><div onClick={() => scrollToSection("about")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Business Strategy</div></li>
+              <li><div onClick={() => scrollToSection("about")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Revenue Optimization</div></li>
               <li><div onClick={() => scrollToSection("contact")} className="text-gray-400 hover:text-saas-orange transition-colors cursor-pointer">Book a Call</div></li>
             </ul>
           </div>
