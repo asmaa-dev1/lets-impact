@@ -34,7 +34,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-b from-saas-black via-[#0a0a0a] to-saas-black overflow-hidden min-h-[85vh] flex items-center py-2">
+    <div className="relative bg-gradient-to-b from-saas-black via-[#0a0a0a] to-saas-black overflow-hidden min-h-[25vh] flex items-center -mt-16 -mb-20">
       {/* Animated floating orbs */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-orange-500/30 rounded-full blur-[100px] animate-pulse"></div>
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-amber-500/30 rounded-full blur-[120px] animate-pulse" style={{animationDelay: '1s', animationDuration: '4s'}}></div>
