@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import PressSection from '@/components/PressSection';
-import LogoCarousel from '@/components/LogoCarousel';
+// import LogoCarousel from '@/components/LogoCarousel';
 import ClientShowcaseCarousel from '@/components/ClientShowcase';
 import CalendlySection from '@/components/CalendlySection';
 import FaqSection from '@/components/FaqSection';
@@ -20,9 +20,9 @@ const Index = () => {
         </section>
         
         {/* Section 2: About */}
-        <section id="about">
+        {/* <section id="about">
           <LogoCarousel />
-        </section>
+        </section> */}
         
         
         {/* Section 4: Testimonials */}

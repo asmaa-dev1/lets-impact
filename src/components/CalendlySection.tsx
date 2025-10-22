@@ -39,15 +39,16 @@ const CalendlySection = () => {
           </div>
         </div>
 
-        {/* Calendly Embed */}
+        {/* Calendly Embed - Full content visible without scroll */}
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-3xl mx-auto">
           <iframe
             src="https://calendly.com/asmaaelhint0/30min?embed_domain=localhost&embed_type=Inline&hide_gdpr_banner=1"
             width="100%"
-            height="550"
+            height="900"
             frameBorder="0"
             title="Calendly Booking"
-            className="w-full"
+            className="w-full h-[900px]"
+            scrolling="no"
           />
         </div>
 

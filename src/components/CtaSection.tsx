@@ -10,7 +10,7 @@ const BlogSection = () => {
       excerpt: "Discover how Casablanca is becoming Africa's next tech hub and what it means for ambitious entrepreneurs.",
       category: "Market Insights",
       readTime: "5 min read",
-      image: "/img/casa1.jpg", // استعمل الصورة ديال المغرب
+      image: "/img/casa1.jpg",
       tag: "🇲🇦 Morocco Focus",
       gradient: "from-orange-500 to-amber-600"
     },
@@ -20,7 +20,7 @@ const BlogSection = () => {
       excerpt: "Learn the proven tactics elite brands use to achieve 10x growth without burning through their budget.",
       category: "Growth Hacking",
       readTime: "7 min read",
-      image: "/img/casa3.jpg", // الصورة الثانية
+      image: "/img/casa3.jpg",
       tag: "🚀 Trending",
       gradient: "from-amber-500 to-orange-600"
     },
@@ -37,15 +37,15 @@ const BlogSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-saas-black via-[#0a0a0a] to-saas-darkGray py-20 relative overflow-hidden">
+    <div className="bg-gradient-to-b from-black via-[#0a0a0a] to-gray-900 py-8 md:py-12 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-[120px]"></div>
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px]"></div>
       
-      <div className="section-container relative z-10">
+      <div className="px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-orange-500/10 text-saas-orange px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-orange-500/20">
+        <div className="text-center mb-8 md:mb-10">
+          <div className="inline-flex items-center gap-2 bg-orange-500/10 text-orange-500 px-4 py-2 rounded-full text-sm font-semibold mb-3 border border-orange-500/20">
             <TrendingUp className="w-4 h-4" />
             <span>Latest Insights</span>
           </div>
@@ -59,7 +59,7 @@ const BlogSection = () => {
         </div>
 
         {/* Blog Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogPosts.map((post, index) => (
             <div 
               key={post.id}
@@ -122,7 +122,7 @@ const BlogSection = () => {
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <Button 
             className="bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold px-8 py-6 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(251,146,60,0.4)] hover:shadow-[0_0_50px_rgba(251,146,60,0.7)] hover:scale-105 group"
           >

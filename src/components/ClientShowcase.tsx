@@ -1,86 +1,94 @@
 import React, { useState } from 'react';
 import { Star, ChevronRight } from 'lucide-react';
-import ProjectModal from './ProjectModal';
 
-// Projects with complete data
+// Projects with complete data - ADD YOUR REAL CLIENT PROJECTS HERE
+// Uncomment and fill with your actual client data when ready
+/*
 const projects = [
   {
-    name: "Il Ristorante",
-    client: "Simon",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&h=500",
-    testimonial: "Before, we had to spend a lot of money for an agency to find us clients online...",
-    fullTestimonial: "Before, we had to spend a lot of money for an agency to find us clients online, it wasn't great in terms of profitability. Thanks to the website that cyberscale developed, we finally have real visibility, and reservations come in for free. We no longer need to pay an agency.",
+    name: "Project Name",
+    client: "Client Name",
+    image: "path/to/image.jpg",
+    testimonial: "Short testimonial preview...",
+    fullTestimonial: "Full testimonial text here...",
     rating: 5,
-    stats: "+300 customers served per month",
+    stats: "+XXX metric here",
     projectUrl: "#"
   },
-  {
-    name: "Onestore",
-    client: "Valérie",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500",
-    testimonial: "Before our sales process was a bit manual and we wasted a lot of time...",
-    fullTestimonial: "Before our sales process was a bit manual and we wasted a lot of time with clients. The system that CyberScale created now allows us to manage everything online, it's much more professional and we save so much time!",
-    rating: 5,
-    stats: "+500 orders per month",
-    projectUrl: "#"
-  },
-  {
-    name: "iPxcs",
-    client: "Pierre",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=500",
-    testimonial: "CyberScale did an impeccable job for iPxcs. Adam and his team created a...",
-    fullTestimonial: "CyberScale did an impeccable job for iPxcs. Adam and his team created a platform that allows us to manage all our projects easily. The result exceeds our expectations, and the team was always available for our questions.",
-    rating: 5,
-    stats: "+200 projects managed",
-    projectUrl: "#"
-  },
-  {
-    name: "MyJiminy",
-    client: "Alexis",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&h=500",
-    testimonial: "I was very happy to work with Adam and his team. Adam is someone committed...",
-    fullTestimonial: "I was very happy to work with Adam and his team. Adam is someone committed who really understands his client's needs. The site they created for MyJiminy is exactly what we wanted, modern and functional.",
-    rating: 5,
-    stats: "+1000 active users",
-    projectUrl: "#"
-  },
-  {
-    name: "TechFlow",
-    client: "Marie",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500",
-    testimonial: "At the end of 2022, I needed to change our management system. I wanted...",
-    fullTestimonial: "At the end of 2022, I needed to change our management system. CyberScale created a custom solution that saves us hours every week. Their support is also excellent!",
-    rating: 5,
-    stats: "+150 client companies",
-    projectUrl: "#"
-  }
+  // Add more projects here...
 ];
+*/
+
+// Temporary empty array - remove this when you add your real projects
+const projects = [];
+
+const ProjectModal = ({ isOpen, onClose, project }) => {
+  if (!isOpen || !project) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" onClick={onClose}>
+      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+        <div className="relative">
+          <img 
+            src={project.image}
+            alt={project.name}
+            className="w-full h-64 object-cover"
+          />
+          <button 
+            onClick={onClose}
+            className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-gray-100"
+          >
+            ✕
+          </button>
+        </div>
+        
+        <div className="p-8">
+          <h3 className="text-3xl font-bold text-gray-900 mb-2">{project.name}</h3>
+          <p className="text-gray-600 mb-4">Client: <span className="text-orange-500 font-bold">{project.client}</span></p>
+          
+          <div className="flex mb-6">
+            {[...Array(project.rating)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+            ))}
+          </div>
+          
+          <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+            "{project.fullTestimonial}"
+          </p>
+          
+          <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded">
+            <p className="text-orange-900 font-semibold">{project.stats}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const ClientShowcaseCarousel = () => {
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleViewMore = (project: typeof projects[0]) => {
+  const handleViewMore = (project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
 
   return (
     <>
-      <div className="bg-saas-black py-16 md:py-24 overflow-hidden">
-        <div className="section-container">
-      <div className="max-w-6xl mx-auto text-center relative z-10">
-        <p className="text-xl md:text-2xl text-gray-400 mb-6 font-light">
-          Industry leaders and professionals agree:
-        </p>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-12">
-          <span className="text-saas-orange">Let's Impact</span>{' '}
-          <span className="text-white">redefines the way</span>
-          <br />
-          <span className="text-white">businesses grow.</span>
-        </h2>
-      
-      </div>
+      <div className="bg-black py-8 md:py-12 overflow-hidden">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto text-center relative z-10">
+            <p className="text-xl md:text-2xl text-gray-400 mb-6 font-light">
+              Industry leaders and professionals agree:
+            </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-12">
+              <span className="text-orange-500">Let's Impact</span>{' '}
+              <span className="text-white">redefines the way</span>
+              <br />
+              <span className="text-white">businesses grow.</span>
+            </h2>
+          </div>
           
           {/* Carousel Container */}
           <div className="relative">
